@@ -1,0 +1,11 @@
+{
+  "name": "winevotefrontend",
+  "version": "1.0.0",
+  "description": "Dieses Projekt ist das Frontend für WineVote.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
