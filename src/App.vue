@@ -53,6 +53,14 @@ import WineView from "@/views/WineView.vue";
 
 </template>-->
 
+<template>
+
+  <div>
+    Hello World
+  </div>
+
+</template>
+
 <style scoped>
 
 </style>
