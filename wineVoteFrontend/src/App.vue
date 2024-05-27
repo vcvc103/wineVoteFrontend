@@ -3,7 +3,7 @@ import { RouterLink, RouterView } from 'vue-router'
 import WineView from "@/views/WineView.vue";
 </script>
 
-<template>
+<!--<template>
   <div>Navigation Bar
   <router-link to="/">Home</router-link> |
   <router-link to="/test">Test</router-link>
@@ -51,7 +51,7 @@ import WineView from "@/views/WineView.vue";
       </v-layout>
     </v-card>
 
-</template>
+</template>-->
 
 <style scoped>
 
