@@ -20,7 +20,7 @@ import WineView from "@/views/WineView.vue";
         >
           <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
 
-          <v-toolbar-title>My files</v-toolbar-title>
+          <v-toolbar-title>Wine Vote</v-toolbar-title>
 
           <v-spacer></v-spacer>
 
