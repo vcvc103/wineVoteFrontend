@@ -35,9 +35,9 @@ onMounted(() => {
 
   <v-btn @click="loadThings">Load Wines</v-btn>
 
-    <span>
+
     {{items}}
-  </span>
+
 
 </template>
 
