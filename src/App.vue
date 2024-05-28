@@ -1,18 +1,21 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import WineView from "@/views/WineView.vue";
+import {loadThings} from "@/scripts";
 </script>
 
-<!--<template>
+<template>
   <div>Navigation Bar
   <router-link to="/">Home</router-link> |
   <router-link to="/test">Test</router-link>
 </div>
   <WineView></WineView>
 
+  <button @click="loadThings">Load Wines</button>
 
 
-    <v-card>
+
+<!--    <v-card>
       <v-layout>
         <v-app-bar
             color="primary"
@@ -49,17 +52,17 @@ import WineView from "@/views/WineView.vue";
           </v-card-text>
         </v-main>
       </v-layout>
-    </v-card>
+    </v-card>-->
 
-</template>-->
+</template>
 
-<template>
+<!--<template>
 
   <div>
     Hello World
   </div>
 
-</template>
+</template>-->
 
 <style scoped>
 
