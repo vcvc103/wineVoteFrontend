@@ -1,7 +1,30 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import {RouterLink} from 'vue-router'
 import WineView from "@/views/WineView.vue";
-import {loadThings} from "@/scripts";
+import {loadThings} from "./scripts"
+import {defineComponent, onMounted, ref} from "vue";
+console.log("farhan1");
+
+const items = ref<any[]>([]);
+
+const loadData = async () => {
+  try {
+    console.log("farhan");
+    const data = await loadThings(); // Await sollte hier verwendet werden
+    items.value = data;
+    console.log('Loaded things:', items.value);
+  } catch (error) {
+    console.error('Error loading things:', error);
+  }
+};
+
+// Automatisches Laden von Daten, wenn die Komponente gemountet wird
+onMounted(() => {
+  loadData();
+});
+
+
+
 </script>
 
 <template>
@@ -11,48 +34,11 @@ import {loadThings} from "@/scripts";
 </div>
   <WineView></WineView>
 
-  <button @click="loadThings">Load Wines</button>
+  <v-btn @click="loadThings">Load Wines</v-btn>
 
-
-
-<!--    <v-card>
-      <v-layout>
-        <v-app-bar
-            color="primary"
-            prominent
-        >
-          <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-
-          <v-toolbar-title>Wine Vote</v-toolbar-title>
-
-          <v-spacer></v-spacer>
-
-          <template v-if="$vuetify.display.mdAndUp">
-            <v-btn icon="mdi-magnify" variant="text"></v-btn>
-
-            <v-btn icon="mdi-filter" variant="text"></v-btn>
-          </template>
-
-          <v-btn icon="mdi-dots-vertical" variant="text"></v-btn>
-        </v-app-bar>
-
-        <v-navigation-drawer
-            v-model="drawer"
-            :location="$vuetify.display.mobile ? 'bottom' : undefined"
-            temporary
-        >
-          <v-list
-              :items="items"
-          ></v-list>
-        </v-navigation-drawer>
-
-        <v-main style="height: 500px;">
-          <v-card-text>
-            The navigation drawer will appear from the bottom on smaller size screens.
-          </v-card-text>
-        </v-main>
-      </v-layout>
-    </v-card>-->
+  <div>
+    {{items}}
+  </div>
 
 </template>
 
