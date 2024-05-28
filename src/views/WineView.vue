@@ -13,7 +13,7 @@ const wines = ref([
 
 <template>
 <div>Hier seht ihr den Wein des Tages.</div>
-  <Wine v-for="wine in wines" :key="wine.name" :name="wine.name"/>
+<!--  <Wine v-for="wine in wines" :key="wine.name" :name="wine.name"/>-->
 </template>
 
 <style scoped>
