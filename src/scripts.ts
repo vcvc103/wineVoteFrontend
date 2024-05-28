@@ -16,4 +16,4 @@ loadThings ()
 }
 
 export const itemsWine: Wine [] = [];
-export interface Wine{name: String, price: String, age:String}
+export interface Wine{name: string, price: string, age:string}
