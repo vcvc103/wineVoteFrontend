@@ -2,15 +2,14 @@
 import {RouterLink} from 'vue-router'
 import WineView from "@/views/WineView.vue";
 import {loadThings} from "./scripts"
-import {defineComponent, onMounted, ref} from "vue";
-console.log("farhan1");
+import {onMounted, ref} from "vue";
 
 const items = ref<any[]>([]);
 
 const loadData = async () => {
   try {
     console.log("farhan");
-    const data = await loadThings(); // Await sollte hier verwendet werden
+    const data = loadThings(); // Await sollte hier verwendet werden
     items.value = data;
     console.log('Loaded things:', items.value);
   } catch (error) {
@@ -36,9 +35,9 @@ onMounted(() => {
 
   <v-btn @click="loadThings">Load Wines</v-btn>
 
-  <div>
+    <span>
     {{items}}
-  </div>
+  </span>
 
 </template>
 

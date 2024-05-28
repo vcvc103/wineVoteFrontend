@@ -1,7 +1,8 @@
 export function loadThings ()
 {
     let items : any[] = []
-    const endpoint = 'http://localhost:8080/wine'
+    const baseUrl = import.meta.env.VITE_APP_BACKEND_BASE_URL
+    const endpoint  = baseUrl + "/wine"
     const requestOptions = {
         method: 'GET',
         redirect: 'follow' as RequestRedirect
